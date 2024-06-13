@@ -4,6 +4,7 @@ const input = document.querySelector("input");
 const modify = document.querySelector(".modify-number-squares");
 const randomSquares = document.querySelector(".random-squares");
 const blackSquares = document.querySelector(".black-squares");
+const eraseDrawing = document.querySelector(".erase-drawing");
 
 function generateDefaultGrid() {
     for (let i = 0; i < 16; i++) {
@@ -54,6 +55,13 @@ function addRandomMouseEvent() {
   }
 }
 
+function deleteDrawing() {
+  const allSquares = document.querySelectorAll(".square");
+  for (let i = 0; i < allSquares.length; i++) {
+    allSquares[i].style.backgroundColor = "white";
+  }
+}
+
 generateDefaultGrid();
 addDefaultMouseEvent();
 
@@ -86,4 +94,8 @@ randomSquares.addEventListener("click", () => {
 
 blackSquares.addEventListener("click", () => {
   addDefaultMouseEvent();
+})
+
+eraseDrawing.addEventListener("click", () => {
+  deleteDrawing();
 })
