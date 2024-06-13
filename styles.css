@@ -49,9 +49,14 @@ body {
     flex: auto;
 }
 
+.container-input-erase {
+    display: flex;
+    align-items: center;
+}
+
 .user-input-container {
     display: flex;
-    margin: 20px 0;
+    margin: 20px 85px;
     gap: 10px;
 }
 
@@ -60,6 +65,39 @@ input {
     width: 250px;
 }
 
+.erase-drawing {
+    height: 35px;
+    border: solid;
+    border-radius: 8px;
+}
+
+.erase-drawing:hover {
+    border: solid gray;
+    border-radius: 8px;
+}
+
 .change-color {
     margin-bottom: 10px;
+}
+
+.black-squares,
+.random-squares {
+    border: solid gray;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.black-squares:hover {
+    background-color: black;
+    color: white;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.random-squares:hover {
+    background-color: goldenrod;
+    border: solid goldenrod;
+    border-width: 2px;
+    border-radius: 5px;
 }
